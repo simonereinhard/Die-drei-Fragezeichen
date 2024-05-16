@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Wrapped</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menuline">
+            <img src="img/wave-sound-white.png" alt="Radio Wrapped Logo" width="40px">
+        </div>
+    
+        <p>RADIO WRAPPED</p>
+    
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-images">
+            <img class="wrapped" src="img/Radio.png" alt="radio.wrapped">
+            <img class="headline" src="img/radio_wrapped_titel.png" alt="radio_wrapped_titel">
+            </div>
+            <div  class="intro-text">
+                <p>Finde die meist gespielten Songs auf Energy Bern</p>
+                <p>JETZT ENTDECKEN</p>
+                <img class="pfeil" src="img/pfeil.png" alt="pfeil">
+            </div> 
+            </section>
+        
+        <section class="uebersicht">
+            <div class="content-box">
+            <h2>Most played 30's in the Last 30 Days</h2>
+            <div class="oval-button">
+                <span class="icon-link" onclick="displaySongsOnClick()">
+                    <img src="img/musical-note.png" alt="Musical Note" class="icon-image-music">
+                </span>
+                <span href="#" class="icon-link" onclick="displayArtistsOnClick()">
+                    <img src="img/user.png" alt="User" class="icon-image-user">
+                </span>
+            </div>
+        </div>
+        </section>
+      
+<!-- Container für dynamisch geladene Daten -->
+<div id="charts-container-songs" class="song-list">
+    <!-- Daten für die meistgespielten Songs werden hier durch JavaScript eingefügt -->
+</div>
+
+<div id="charts-container-artists" class="artist-list">
+    <!-- Daten für die meistgespielten Künstler werden hier durch JavaScript eingefügt -->
+</div>
+
+     
+    </main>
+        <footer>
+            <p>IM Projekt by:</p>
+            <p>Isabelle Gassner</p>
+            <p>Nora Buchmann</p>
+            <p>Simone Reinhard</p>
+            <p>©2024 FHGR</p>
+        </footer>
+        

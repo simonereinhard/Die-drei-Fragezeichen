@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(102, 172, 173, 0.6); /* Light blue background with 60% opacity */
+    color: #333333; /* Standard text color for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100%;
+}
+
+header {
+    background-color: #EA7127; /* Tomato red for header background */
+    color: white; /* White text in the header */
+    display: flex;
+    padding: 5px 5px 5px 10px; /* Adjust padding for better spacing */
+    box-sizing: border-box;
+}
+
+header img {
+    height: 50px; /* Adjusted for visual balance */
+    padding-right: 20px;
+}
+.wrapped {
+    width: 25vw;
+    float: left; /* This will push the element to the left */
+    margin-right: auto; /* Optionally control spacing to the right */
+    max-width: 500px;
+    margin-left: 100px;
+}   
+.headline {
+    width: 50vw;
+    float: right; /* This will push the element to the right */
+    margin-right: auto; /* Optionally control spacing to the right */
+    max-width: 800px;
+    margin-top: 150px;
+}
+
+.intro-images {
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center; /* Zentriert die Inhalte horizontal */
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    padding: 0 50px; 
+}
+
+.wrapped, .headline {
+    max-width: 50%; /* Begrenzt die maximale Breite jedes Bildes auf 50% des Containers */
+    height: auto; /* Behält das Seitenverhältnis bei */
+}
+.pfeil {
+    width: 50px;  /* Setze die Breite der Bilder auf 15px */
+    height: auto;
+   
+}   
+.intro-text {
+    align-items: center;
+    justify-content: center;
+    margin-right: auto; /* Zentriert horizontale Inhalte */
+    margin-left: 470px; /* Schiebe den Text mehr nach rechts */
+}
+
+.intro {
+    text-align: center; /* Center alignment for intro section */
+    padding: 50px 20px; /* Increased padding for better spacing */
+}
+
+.intro h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4em; /* Larger font size for impact */
+    color: #FF6347; /* Tomato red, consistent with your header */
+    margin: 0; /* Remove default margin for clean spacing */
+}
+
+.intro p {
+    font-size: 1.5em; /* Slightly larger for better readability */
+    color: #FFFFFF; /* Darker grey for contrast */
+}
+
+.uebersicht {
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center;
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    width: 100%;
+}
+
+.content-box {
+    display: flex; /* Stellt Flexbox für den Container ein */
+    justify-content: space-between; /* Verteilt den Platz gleichmäßig zwischen den Kindern */
+    align-items: center; /* Zentriert die Kinder vertikal */
+    width: 100%; /* Anpassung der Breite */
+    max-width: 1130px; /* Maximale Breite für große Bildschirme */
+    margin: 50px auto; /* Zentriert den Container horizontal */
+    padding: 20px;
+}
+
+.uebersicht h2 {
+    color: #FF6347;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    margin: 0; /* Entfernt die Margins, die den Fluss stören könnten */
+    padding: 0;
+    flex-grow: 1; /* Erlaubt dem Titel, den verfügbaren Raum zu nutzen */
+    text-align: left; /* Ausrichtung des Textes links */
+}
+
+
+#charts-container-songs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#charts-container-artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.song-list{
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: end;
+}
+
+.artist-list{
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: end;
+}
+
+.song {
+    background-color: pink;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid #963E6A;
+    text-align: center;
+    filter: drop-shadow(2px 2px 5px #000000ba);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    justify-content: space-between;
+    padding: 10px;
+    font: 16px;
+    transition: transform 0.3s ease;
+}
+
+.artist {
+    background-color: pink;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid #963E6A;
+    text-align: center;
+    filter: drop-shadow(2px 2px 5px #000000ba);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    justify-content: space-between;
+    padding: 10px;
+    font: 16px;
+    transition: transform 0.3s ease;
+}
+
+/* Farbvariationen für die Songs basierend auf dem Beispiel */
+.song:nth-child(1) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.song:nth-child(2) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.song:nth-child(3) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.song:nth-child(4) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.song:nth-child(5) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.song:nth-child(6) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.song:nth-child(7) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.song:nth-child(8) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.song:nth-child(9) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.song:nth-child(10) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.song:nth-child(11) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.song:nth-child(12) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.song:nth-child(13) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.song:nth-child(14) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.song:nth-child(15) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.song:nth-child(16) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.song:nth-child(17) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.song:nth-child(18) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.song:nth-child(19) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.song:nth-child(20) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.song:nth-child(21) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.song:nth-child(22) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.song:nth-child(23) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.song:nth-child(24) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.song:nth-child(25) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.song:nth-child(26) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.song:nth-child(27) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.song:nth-child(28) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.song:nth-child(29) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.song:nth-child(30) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+
+
+/* Farbvariationen für die Artists basierend auf dem Beispiel */
+.artist:nth-child(1) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.artist:nth-child(2) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.artist:nth-child(3) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.artist:nth-child(4) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.artist:nth-child(5) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.artist:nth-child(6) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.artist:nth-child(7) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.artist:nth-child(8) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.artist:nth-child(9) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.artist:nth-child(10) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.artist:nth-child(11) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.artist:nth-child(12) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.artist:nth-child(13) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.artist:nth-child(14) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.artist:nth-child(15) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.artist:nth-child(16) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.artist:nth-child(17) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.artist:nth-child(18) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.artist:nth-child(19) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.artist:nth-child(20) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.artist:nth-child(21) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.artist:nth-child(22) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.artist:nth-child(23) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.artist:nth-child(24) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+.artist:nth-child(25) { background-color: #963E6A; border-color: #DD8DDB; } /* Dunkelviolet mit pinkem Rahmen */
+.artist:nth-child(26) { background-color: #4D64C6; border-color: #EA7127; } /* Blau mit orangenem Rahmen */
+.artist:nth-child(27) { background-color: #DD8DDB; border-color: #51E9ED; } /* Pink mit türkisem Rahmen */
+.artist:nth-child(28) { background-color: #B5C61A; border-color: #4D64C6; } /* Grün mit blauem Rahmen */
+.artist:nth-child(29) { background-color: #51E9ED; border-color: #B5C61A; } /* Türkis mit grünem Rahmen */
+.artist:nth-child(30) { background-color: #EA7127; border-color: #963E6A; } /* Orange mit dunkelviolettem Rahmen */
+
+/* Hover-Effekt für Songs */
+.song:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.4);
+}
+
+.artist:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Stil für Rank-Nummerierung */
+.rank-number {
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Vertikale Zentrierung, falls nötig */
+    justify-content: flex-start; /* Links ausrichten */
+    margin-left: 10px;
+}
+
+.rank {
+    background-color: var(--dark-blue);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 1px;
+}
+
+.rank-body {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr; /* Eine Spalte */
+    grid-gap: 0px; /* Abstand zwischen den Zeilen/Spalten */
+}
+
+.margin-top {
+    margin: 10px 0 10px 0;
+}
+
+
+/* Titel Textstil */
+.song h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 22px; /* Größere Schriftgröße für Titel */
+    text-align: right;
+    margin: 0;
+    text-transform: none; /* Keine Großbuchstaben */
+    padding: 0;
+    margin-right: 20px;
+}
+
+.artist h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 22px; /* Größere Schriftgröße für Titel */
+    text-align: center;
+    margin: 0;
+    text-transform: none; /* Keine Großbuchstaben */
+}
+
+
+/* Künstler Textstil */
+.song h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 17px; /* Größere Schriftgröße für Künstlernamen */
+    text-align: right;
+    margin: 0;
+    text-transform: none; /* Keine Großbuchstaben */
+    padding: 0;
+    margin-right: 20px;
+}
+
+.song p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 14px; /* Größere Schriftgröße für Künstlernamen */
+    text-align: right;
+    margin: 0;
+    text-transform: none; /* Keine Großbuchstaben */
+    padding: 0;
+    margin-right: 20px;
+}
+
+.artist p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 14px; /* Größere Schriftgröße für Künstlernamen */
+    text-align: center;
+    margin: 0;
+    text-transform: none; /* Keine Großbuchstaben */
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 80px;
+    background-color: #66acad;
+    color: white;
+    font-size: 0.75em; /* Smaller font size for the footer */
+}
+
+.button {
+    display: flex; /* Flexbox bleibt aktiviert */
+    justify-content: flex-end; /* Halte die Ausrichtung am rechten Rand */
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    width: 100%; /* Stellt sicher, dass der Container die volle Breite einnimmt */
+    margin-right: 180px; /* Hält den vorherigen rechten Abstand */
+    padding: 10px; /* Fügt ein wenig Innenabstand hinzu */
+    box-sizing: border-box;
+}
+
+.oval-button {
+    display: flex;
+    justify-content: center;  /*Stellt sicher, dass die Inhalte zentriert sind*/
+    align-items: center;
+    flex-grow: 0; /* Verhindert, dass der Button sich ausdehnt */
+    padding: 5px;
+    width: 100px; /* Breite des ovalen Containers */
+    height: 40px; /* Höhe des ovalen Containers */
+    background: white;
+    border-radius: 30px; /* Erzeugt ein ovales Design */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.icon-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-image-music {
+    width: 30px; /* Angemessene Größe für die Icons */
+    height: auto; /* Behält das Seitenverhältnis bei */
+    margin: 5px 5px; /* Abstand zwischen den Bildern */
+}
+
+.icon-image-user {
+    width: 30px; /* Angemessene Größe für die Icons */
+    height: auto; /* Behält das Seitenverhältnis bei */
+    margin: 5px 5px; /* Abstand zwischen den Bildern */
+}
+
+.icon-image-music:hover,
+.icon-image-user:hover {
+    opacity: 50%;
+}
+
+audio {
+    width: 100%;       /* Setzt die Breite des Audio-Players */
+    height: 50px;      /* Setzt die Höhe des Audio-Players, falls dies das Aussehen verbessert */
+    border: 1px solid #ccc; /* Fügt einen Rahmen hinzu */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Fügt einen Schatten hinzu */
+}
+
+.play-button {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 20px;
+    background-color: white; /* Grüne Farbe für den Play-Button */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    opacity: 70%;
+}
+
+.play-button:hover {
+    background-color: grey; /* Dunklere Schattierung beim Hover */
+}
+
+.play-button:focus {
+    outline: none; /* Entfernt den Standardfokus-Ring */
+    box-shadow: 0 0 0 2px pink(0, 255, 0, 0.5); /* Grüner Fokus-Schatten */
+}
+
+ /* Responsive, Mobile-Ansicht */
+
+ @media only screen and (max-width: 600px) {
+ header {
+    padding: 5px; /* Verringere den oberen und unteren Abstand im Header */
+  }
+  
+  .wrapped {
+    width: 25vw; /* Breite für Desktop-Geräte */
+    margin-left: 10px; /* Linker Rand für Desktop-Geräte */
+    margin-right: auto; /* Rechter Rand für Desktop-Geräte */
+    max-width: 200px; /* Maximale Breite für Desktop-Geräte */
+  }
+  
+  .headline {
+    width: 50vw; /* Breite für Desktop-Geräte */
+    margin-top: 70px; /* Größerer Abstand zum Wrapped-Bild für Desktop-Geräte */
+    margin-left: auto; /* Linker Rand für Desktop-Geräte */
+    margin-right: auto; /* Rechter Rand für Desktop-Geräte */
+    max-width: 800px; /* Maximale Breite für Desktop-Geräte */
+  }
+
+  .intro-text {
+    width: 90%; /* 90% der Bildschirmbreite für mobile Geräte */
+    margin: 20px auto; /* Zentriert den Text horizontal und fügt vertikalen Abstand hinzu */
+    font-size: 10px; /* Kleinere Schriftgröße für mobile Geräte */
+    text-align: center; /* Zentriert den Text auf mobilen Geräten */
+  }
+
+  .uebersicht h2 {
+    color: #FF6347;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin: 0; /* Entfernt die Margins, die den Fluss stören könnten */
+    padding: 0;
+    flex-grow: 1; /* Erlaubt dem Titel, den verfügbaren Raum zu nutzen */
+    text-align: left; /* Ausrichtung des Textes links */
+}
+
+.content-box {
+    margin: 10px; /* Zentriert den Container horizontal */
+
+}
+
+}
+
+ /* Responsive, Desktop-Ansicht */
+@media only screen and (max-width: 1000px) {
+     
+    .intro-text {
+        font-size: 10px;
+        margin-right: 5px; /* Zentriert horizontale Inhalte */
+        margin-left: auto; /* Schiebe den Text mehr nach rechts */
+} 
+
+}
+@media only screen and (max-width: 1200px) {
+     
+    .intro-text {
+        font-size: 13px;
+        margin-right: 10px; /* Zentriert horizontale Inhalte */
+        margin-left: auto; /* Schiebe den Text mehr nach rechts */
+    }
+
+}
