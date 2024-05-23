@@ -13,14 +13,49 @@ header {
     background-color: #EA7127; /* Tomato red for header background */
     color: white; /* White text in the header */
     display: flex;
-    padding: 5px 5px 5px 10px; /* Adjust padding for better spacing */
-    box-sizing: border-box;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.menuline {
+    display: flex;
+align-items: left
+;
 }
 
 header img {
     height: 50px; /* Adjusted for visual balance */
     padding-right: 20px;
 }
+
+header p {
+    margin: 0; /* Entfernen des Standardabstands */
+    padding: 0; /* Entfernen des Innenabstands */
+}
+
+.team-button {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center; /* Zentriert die Inhalte horizontal */
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    padding: 5px;
+    width: 80px; /* Breite des Buttons */
+    height: 40px; /* Höhe des Buttons */
+    border: 2px solid #51E9ED; /* Randfarbe und Breite */
+    border-radius: 30px; /* Erzeugt ein ovales Design */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Schatten */
+    color: white; /* Textfarbe */
+    text-align: center; /* Zentriert den Text horizontal */
+    text-decoration: none; /* Entfernt Standard-Link-Unterstreichungen */
+    transition: background-color 0.3s, color 0.3s; /* Animiert den Farbwechsel beim Hover */
+    margin-left: 20px;
+}
+
+.team-button:hover {
+    background-color: #DD8DDB; /* Ändert die Hintergrundfarbe beim Überfahren */
+    color: white; /* Ändert die Textfarbe beim Überfahren */
+}
+
 .wrapped {
     width: 25vw;
     float: left; /* This will push the element to the left */
@@ -420,6 +455,94 @@ audio {
 .play-button:focus {
     outline: none; /* Entfernt den Standardfokus-Ring */
     box-shadow: 0 0 0 2px pink(0, 255, 0, 0.5); /* Grüner Fokus-Schatten */
+}
+
+/* Teamseite */
+
+.team-info {
+    text-align: center; /* Zentriert den Text horizontal */
+    padding: 50px 20px; /* Erhöht den Innenabstand für einen besseren Abstand */
+}
+
+.team-info h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4em; /* Größere Schriftgröße für Wirkung */
+    color: #FF6347; /* Tomatenrot, konsistent mit Ihrem Header */
+    margin: 0; /* Entfernt den Standardabstand für eine saubere Ausrichtung */
+    padding: 0; /* Entfernt den Innenabstand für eine saubere Ausrichtung */
+}
+
+.team-info p {
+    font-size: 1.5em; /* Etwas größer für bessere Lesbarkeit */
+    color: #FFFFFF; /* Dunkleres Grau für Kontrast */
+}
+
+.uebersicht {
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: center;
+    align-items: center; /* Zentriert die Inhalte vertikal */
+    width: 100%;
+}
+
+.team-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease; /* Übergangseffekt */
+}
+
+.content-box-team {
+    position: relative;
+    background-color: pink;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid #963E6A;
+    text-align: center;
+    filter: drop-shadow(2px 2px 5px #000000ba);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    justify-content: space-between;
+    padding: 0;
+    font: 16px;
+    transition: transform 0.3s ease;
+    margin: 30px;
+    overflow: hidden; /* Stellt sicher, dass nichts über den Container hinausgeht */
+}
+
+.content-box-team .team-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Um das Bild in der Box zu positionieren */
+    border-radius: 10px; /* Passt die Rundung an die Box an */
+    opacity: 0; /* Beginnt mit einer Opazität von 0 */
+    transition: opacity 0.3s ease; /* Übergangseffekt */
+}
+
+.content-box-team:hover .team-image {
+    opacity: 1; /* Zeige das Bild vollständig an */
+}
+
+.content-box-team:hover {
+    transform: translateY(-5px);
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.4);
+}
+
+.content-box-team h5 {
+    font-size: 1.5em; /* Größere Schriftgröße für Titel */
+    color: white; /* Dunkler Grauton für Kontrast */
+    justify-content: center;
+}
+
+.content-box-team p {
+    font-size: 1em; /* Normale Schriftgröße für den Textinhalt */
+    color: white; /* Etwas helleres Grau für Textinhalt */
 }
 
  /* Responsive, Mobile-Ansicht */
